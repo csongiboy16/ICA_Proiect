@@ -1,0 +1,52 @@
+﻿@page
+@model Ienei_Csongor_Attila_Proiect_ASP_NET.Pages.CarsPage.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Cars</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Cars.Brand" class="control-label"></label>
+                <input asp-for="Cars.Brand" class="form-control" />
+                <span asp-validation-for="Cars.Brand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cars.Model" class="control-label"></label>
+                <input asp-for="Cars.Model" class="form-control" />
+                <span asp-validation-for="Cars.Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cars.ProdDate" class="control-label"></label>
+                <input asp-for="Cars.ProdDate" class="form-control" />
+                <span asp-validation-for="Cars.ProdDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cars.SalesID" class="control-label"></label>
+                <select asp-for="Cars.SalesID" class ="form-control" asp-items="ViewBag.SalesID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cars.Dealershipid" class="control-label"></label>
+                <select asp-for="Cars.Dealershipid" class ="form-control" asp-items="ViewBag.Dealershipid"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,49 @@
+﻿@page
+@model Ienei_Csongor_Attila_Proiect_ASP_NET.Pages.CarsPage.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cars</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cars.Brand)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cars.Brand)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cars.Model)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cars.Model)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cars.ProdDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cars.ProdDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cars.Sales)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cars.Sales.ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cars.Dealership)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cars.Dealership.ID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Cars.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
